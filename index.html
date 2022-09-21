@@ -8,10 +8,11 @@
   <title>BLIKACKA</title>
 </head>
 
-<body>
+<body style="height: 100vh; overflow: hidden;">
   <script>
     let interval;
     let bliking = false;
+    let cursor = true;
 
     const random = (n) => Math.floor(Math.random() * n);
 
@@ -28,6 +29,12 @@
     window.onload = () => toggleBliking();
 
     window.onclick = () => toggleBliking();
+
+    window.onkeypress = (event) => {
+      if (event.keyCode !== 67 && event.keyCode !== 99) return
+      cursor = !cursor
+      document.body.style.cursor = cursor ? "default" : "none"
+    };
   </script>
 </body>
 
