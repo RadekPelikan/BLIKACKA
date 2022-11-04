@@ -26,7 +26,10 @@
       clearInterval(interval);
     };
 
-    window.onload = () => toggleBliking();
+    window.onload = () => {
+		toggleBliking()
+		new Audio('/assets/caremella.mp3').play()
+	};
 
     window.onclick = () => toggleBliking();
 
