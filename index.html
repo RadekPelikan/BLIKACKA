@@ -9,6 +9,7 @@
 </head>
 
 <body style="height: 100vh; overflow: hidden;">
+	<button>HUDBO HRAJ!</button>
   <script>
     let interval;
     let bliking = false;
@@ -27,9 +28,11 @@
     };
 
     window.onload = () => {
-		toggleBliking()
-		new Audio('/assets/caremella.mp3').play()
-	};
+	toggleBliking()
+	new Audio('/assets/caremella.mp3').play()
+    };
+	  
+	  document.querySelector("button").onClick = () => document.querySelector("button").style.display = "none"
 
     window.onclick = () => toggleBliking();
 
